@@ -20,6 +20,6 @@ jobs:
     - name: Build the Docker image
       run: docker build -t todolist-cicd .
     - name: Tag the Docker image
-      run: docker tag todolist-cicd $DOCKER_USERNAME/todolist-cicd:latest
+      run: docker tag todolist-cicd saiid21/todolist-cicd:latest
     - name: Push to Dockerhub
       run: docker push saiid21/todolist-cicd:latest
