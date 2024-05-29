@@ -19,5 +19,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: Build the Docker image
       run: docker build -t todolist-cicd .
+    - name: Tag the Docker image
+      run: docker tag todolist-cicd $DOCKER_USERNAME/todolist-cicd:latest
     - name: Push to Dockerhub
       run: docker push saiid21/todolist-cicd:latest
